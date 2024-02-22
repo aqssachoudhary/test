@@ -51,6 +51,18 @@ Route::post('customer/deposit','TranscationController@store');
 
 Route::get('input','ListController@create');
 Route::get('input','ListController@store');
-Route::get('expense','ExpensesController@store');
+Route::get('customer/link','ExpenseController@create');
+Route::get('customer/trans','TransferController@index');
+Route::post('customer/trans','TransferController@store');
+Route::get('customer/view','TransferController@trans');
+Route::get('customer/balance','TransferController@view');
+Route::get('customer/quote','QuoteController@index');
+Route::post('customer/quote','QuoteController@store');
+Route::get('customer/voice','NivoicesController@index');
+Route::post('customer/voice','NivoicesController@store');
+Route::get('customer/refrence','VoiceController@index');
+Route::post('customer/refrence','VoiceController@store');
+
+
 
 });

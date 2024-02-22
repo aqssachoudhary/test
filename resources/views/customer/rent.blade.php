@@ -23,7 +23,9 @@
                            </div>
                         </div>
                         <div class="panel-body">
-                           <form action="{{url('expense')}}">
+                           <form action="{{url('expense')}}" method="put">
+                              @csrf
+                              @method('PUT')
                               <div class="form-group">
                                  <label>Account</label>
                                  <select class="form-control">

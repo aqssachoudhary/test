@@ -35,6 +35,8 @@
          =====================================================================-->
       <!-- Theme style -->
       <link href="{{asset('assets/dist/css/stylecrm.css')}}" rel="stylesheet" type="text/css"/>
+
+      @yield('cdaf')
       <!-- Theme style rtl -->
       <!--<link href="{{asset('assets/dist/css/stylecrm-rtl.css')}}" rel="stylesheet" type="text/css"/>-->
       <!-- End Theme Layout Style
@@ -363,10 +365,10 @@
                      </a>
                      <ul class="treeview-menu">
                         <li><a href="{{url('customer/deposit')}}">New Deposit</a></li>
-                        <li><a href="expense.html">New Expense</a></li>
-                        <li><a href="transfer.html">Transfer</a></li>
-                        <li><a href="view-tsaction.html">View transaction</a></li>
-                        <li><a href="balance.html">Balance Sheet</a></li>
+                        <li><a href="{{url('customer/link')}}">New Expense</a></li>
+                        <li><a href="{{url('customer/trans')}}">Transfer</a></li>
+                        <li><a href="{{url('customer/view')}}">View transaction</a></li>
+                        <li><a href="{{url('customer/balance')}}">Balance Sheet</a></li>
                         <li><a href="treport.html">Transfer Report</a></li>
                      </ul>
                   </li>
@@ -379,11 +381,11 @@
                      </a>
                      <ul class="treeview-menu">
                         <li><a href="invoice.html">Invoices</a></li>
-                        <li><a href="ninvoices.html">New Invoices</a></li>
+                        <li><a href="{{url('customer/voice')}}">New Invoices</a></li>
                         <li><a href="recurring.html">Recurring invoices</a></li>
-                        <li><a href="nrecurring.html">New Recurring invoices</a></li>
+                        <li><a href="{{url('customer/refrence')}}">New Recurring invoices</a></li>
                         <li><a href="quote.html">quotes</a></li>
-                        <li><a href="nquote.html">New quote</a></li>
+                        <li><a href="{{url('customer/quote')}}">New quote</a></li>
                         <li><a href="payment.html">Payments</a></li>
                         <li><a href="taxeport.html">Tax Rates</a></li>
                      </ul>

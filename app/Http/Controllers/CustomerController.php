@@ -49,5 +49,24 @@ class CustomerController extends Controller
 
       return redirect('customer')->with('success','Record Added');
     }
+
+    public function update(Request $request,$idd){
+        
+        $blog=User::where('id',$idd)->first();
+        $blog->name=$request->name;
+        $blog->lname=$request->lname;
+        $blog->email=$request->email;
+        $blog->pic=$request->pic;
+        $blog->bank_detail=$request->details;
+        $blog->passport=$request->passport;
+        $blog->fb_id=$request->fb;
+        $blog->dob=$request->dob;
+        $blog->address=$request->address;
+        $blog->customer_type=$request->type;
+        $blog->gender=$request->gender;
+        $blog->mobile=$request->mobile;
+        $blog->save();
+        return redirect('customer')->with('success','Record Added');
+    }
     
 }

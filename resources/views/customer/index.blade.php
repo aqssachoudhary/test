@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+
 @section('content')
  <div class="content-wrapper">
             <!-- Content Header (Page header) -->
@@ -108,7 +109,7 @@
                                        <td>{{$customer->name}}</td>
                                        <td>+8801674688663</td>
                                        <td>{{$customer->email}}</td>
-                                       <td>98 Green Rd, Dhaka 1215, Bangladesh</td>
+                                       <td>{{$customer->address}}</td>
                                        <td>V.I.P</td>
                                        <td>27th April,2017</td>
                                        <td><span class="label-custom label label-default">Active</span></td>
@@ -222,3 +223,11 @@
          </div>
 
          @endsection
+
+         @section('cdaf')
+              <style type="text/css">
+                 p{
+                  color:red;
+                 }
+              </style>
+@endsection

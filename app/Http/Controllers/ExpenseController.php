@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\deposit;
+use App\Http\Requests\transfer;
 
 class ExpenseController extends Controller
 {
-    public function expense()
+    public function create()
     {
-        return view('customer.expenses');
+        return view('customer.rent');
     }
 }
